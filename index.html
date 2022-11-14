@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/04bf603a0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png">
+    <meta name="description" content="Welcome to the official site of Onlinity">
+    <meta name="keywords" content="Onlinity, onlinity, pavle ignjatovic, Password generator, password">
+    <script src="script.js" defer></script>
+    <title>Password generator</title>
+</head>
+<body>
+    <h1>Onlinity</h1>
+    
+    <div class="content">
+        <textarea name="generated" id="generated" cols="20" rows="5" readonly></textarea>
+        <div class="control">
+            <form class="settings">
+                <div>
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Include lowercase</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Include uppercase</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Include numbers</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include special symbols</label><br>
+                </div>
+            </form>
+            <div class="length">
+                <p>Password length:</p>
+                <input type="number" id="number">
+            </div>
+            <div class="buttons">
+                <button type="submit" id="submit">Generate</button>
+                <button type="copy" id="copybtn">Copy password</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="media">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Copyright © 2022 Pavle Ignjatović, Onlinity</p>
+    </footer>
+</body>
+</html>
