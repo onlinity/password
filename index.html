@@ -16,11 +16,21 @@
     <title>Password generator</title>
 </head>
 <body>
-    <h1>Onlinity</h1>
+    <header>
+        <img src="icon.png" alt="onlinity">
+        <h1>Onlinity</h1>
+      </header>
     
     <div class="content">
-        <textarea name="generated" id="generated" cols="20" rows="5" readonly></textarea>
+        <div class="textarea">
+            <textarea name="generated" id="generated" cols="20" rows="3" readonly></textarea>
+            <i class="fa-regular fa-copy" id="copybtn"></i>
+        </div>
         <div class="control">
+            <div class="length">
+                <p>Password length:</p>
+                <input type="number" id="number">
+            </div>
             <form class="settings">
                 <div>
                     <input type="checkbox" id="lowercase">
@@ -39,25 +49,22 @@
                     <label for="symbols">Include special symbols</label><br>
                 </div>
             </form>
-            <div class="length">
-                <p>Password length:</p>
-                <input type="number" id="number">
+            <div class="strength">
+                <p>Password strength:</p>
+                <p id="strength">NO DATA</p>
             </div>
-            <div class="buttons">
-                <button type="submit" id="submit">Generate</button>
-                <button type="copy" id="copybtn">Copy password</button>
-            </div>
+
+            <button type="button" id="submit">Generate</button>
+        
         </div>
     </div>
 
     <footer>
         <div class="media">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-linkedin"></i>
+            <a href="https://pavle.tk/"><i class="fa-solid fa-user fa-flip" style="--fa-animation-duration: 2s;"></i></a>
+            <a target="_blank" href="mailto:pavle.ignjatovic.08@gmail.com" title="pavle.ignjatovic.08@gmail.com"><i class="fa-solid fa-envelope fa-flip" style="--fa-animation-duration: 2s;"></i></a>
         </div>
         <p>Copyright © 2022 Pavle Ignjatović, Onlinity</p>
-    </footer>
+      </footer>
 </body>
 </html>
