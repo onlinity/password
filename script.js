@@ -9,6 +9,8 @@ let upper = 0
 let numbers = 0
 let symbols = 0
 
+strength();
+
 
 function getResults(){
     //Getting checkbox results
@@ -99,28 +101,31 @@ document.getElementById('number').addEventListener("keypress", function(event) {
 
 
 function strength(){
-    let str = document.getElementById('strength')
     let l = document.getElementById('number').value
+    let strengthValue = "";
+    let strengthColor = "";
     if (l <= 10){
-        str.innerHTML = 'WEAK'
-        str.style.color = 'red'
+        strengthValue = 'WEAK'
+        strengthColor = 'red'
     } else if (l < 15){
         if (symbols == 1 && upper == 1 && lower == 1){
-            str.innerHTML = 'MEDIUM'
-            str.style.color = 'yellow'
+            strengthValue = 'MEDIUM'
+            strengthColor = 'yellow'
         } else{
-            str.innerHTML = 'WEAK'
-            str.style.color = 'red'
+            strengthValue = 'WEAK'
+            strengthColor = 'red'
         }
     } else{
         if (symbols == 1 && upper == 1 && lower == 1 && numbers == 1){
-            str.innerHTML = 'STRONG'
-            str.style.color = 'green'
+            strengthValue = 'STRONG'
+            strengthColor = 'green'
         } else{
-            str.innerHTML = 'MEDIUM'
-            str.style.color = 'yellow'
+            strengthValue = 'MEDIUM'
+            strengthColor = 'yellow'
         }
     }
+    document.getElementById('strength').innerText = strengthValue;
+    document.getElementById('strength').style.color = strengthColor;
 }
 
 
